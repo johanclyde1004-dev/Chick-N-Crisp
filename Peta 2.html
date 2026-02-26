@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+    <link rel="icon" type="image/x-icon" href="computer.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #e3f2fd; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 380px;
+            border-top: 8px solid #345f83; 
+        }
+
+        h2 {
+            text-align: center;
+            color: #455a64; 
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #607d8b; 
+        }
+
+        input[type="text"], 
+        input[type="password"],
+        input[type="email"],
+        select, 
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #cfd8dc; 
+            border-radius: 6px;
+            box-sizing: border-box;
+            background-color: #fafafa;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, 
+        select:focus, 
+        textarea:focus {
+        border-color: #2196f3;
+        outline: none; 
+        background-color: #ffffff;
+        }
+        
+
+        input[type="text"]:focus, 
+        select:focus, 
+        textarea:focus {
+            outline: none;
+            border-color: #64b5f6;     
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            padding: 5px 0;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        textarea {
+            resize: none;
+            height: 70px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #78909c; 
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #546e7a; 
+        }
+
+        ::placeholder {
+            color: #b0bec5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2> Sign In</h2>
+    
+    <form action="Webpage.html" method="GET">
+        <div class="form-group">
+            <label for="studentName" >Name</label>
+            <input type="text" id="studentName" name="name" placeholder="Enter your account name" required>
+        </div>
+        <div class="form-group">
+            <label for="studentEmail" >Email</label>
+            <input type="email" id="studentEmail" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input  type="password" id="password" name="password" placeholder="At least 8 characters" minlength="8" required>
+        </div>
+        <div class="form-group">
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments"  maxlength="20" placeholder="Comments (Max 20 Characters)"></textarea>
+        </div>
+
+        <button type="submit" >Submit Registration</button>
+    </form>
+</div>
+
+</body>
+</html>
