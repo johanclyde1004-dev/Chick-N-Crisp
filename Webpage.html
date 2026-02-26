@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chick'n Crisp by Melo Jhen - Premium Food Products</title>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgnsrISV0knXSKo7uecnz0MQz9M3H-CHaysA&s">
+    <style>
+        header {
+         background: linear-gradient(135deg, #FF8C00 0%, #FFD700 100%);
+         padding: 20px 40px; 
+            display: flex;      
+         align-items: center; 
+            text-align: left;    
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+        }
+
+        .header-logo {
+          width: 80px;        
+         height: 80px;       
+         object-fit: cover;  
+         border-radius: 50%; 
+         margin-right: 25px; 
+            border: 3px solid white; 
+        } ww
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #fafafa;
+        }
+        
+        header h1 {
+            color: white;
+            font-size: 2.8em;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: #FF8C00;
+            padding: 18px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: 600;
+            font-size: 1.05em;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+            transform: translateY(-2px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #FFD700;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #FFA500 0%, #FFEB3B 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 165, 0, 0.2);
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25em;
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+
+        .btn {
+            background-color: #FF6347;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 99, 71, 0.3);
+            font-size: 1.05em;
+            border: 2px solid #FF6347;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: #FF6347;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 99, 71, 0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #FF8C00;
+            margin-bottom: 50px;
+            font-size: 2.2em;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #FF8C00, #FFD700);
+            border-radius: 2px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .service-card {
+            background-color: white;
+            border-left: 6px solid #FF8C00;
+            text-shadow: #FF8C00;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+
+            
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            opacity: 0.1;
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 140, 0, 0.2);
+            border-left-color: #FFD700;
+        }
+
+        .service-card h3 {
+            color: #FF8C00;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+            font-weight: 400;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            box-shadow: 0 -4px 15px rgba(255, 140, 0, 0.2);
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-weight: 500;
+        }
+
+        .slogan-section {
+            text-align: center;
+            background-color: #333;
+            color: #FFD700;
+            padding: 20px;
+            font-size: 1.5em;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .pricing-table th {
+            background-color: #FF8C00;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .pricing-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .price-text {
+            color: #FF6347;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .hero h2 {
+                font-size: 1.8em;
+            }
+
+            nav a {
+                margin: 0 12px;
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://scontent.fmnl25-7.fna.fbcdn.net/v/t39.30808-6/549025906_122095002459034323_6727852742870852791_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeG0cryj-TDCFBLtsvsQWIEy534Wfy8WxyDnfhZ_LxbHIJxnErx83Gois5RoKR7FMchuS5WAkzVGGDNtzppWZgzR&_nc_ohc=NLbwAIqpL3MQ7kNvwEbEve7&_nc_oc=AdmiJ2xV8k36QdTlGRYtipTORoQIernudbpsYVccYnWy7nqsveAudY1cF4wUPyusDsM&_nc_zt=23&_nc_ht=scontent.fmnl25-7.fna&_nc_gid=WjEOQAzAx2Dzl51FbGTO7Q&oh=00_AfulqXHmAD-R4fYslb5FEul2f-A3viiET8AIb7vmXbDNlw&oe=69A5DCC5" title="link to our facebook page" alt="picture of our logo" width="100px">
+        <div class="header-text">
+            <h1>Chick'n Crisp by Melo Jhen</h1>
+            <p>Premium Quality Food Products</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="https://www.facebook.com/profile.php?id=61581029696505" target="_blank">Home</a>
+        <a href="https://www.facebook.com/share/p/1LSLvGFXhQ/" target="_blank">Products</a>
+        <a href="https://www.facebook.com/profile.php?id=61581029696505" target="_blank">About</a>
+        <a href="https://www.facebook.com/profile.php?id=61581029696505" target="_blank">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Crispy. Fresh. Delicious.</h2>
+        <p>Experience the finest quality chicken products crafted with passion and care.</p>
+        <a href="https://www.facebook.com/profile.php?id=61581029696505" class="btn">Order Now</a>
+    </div>
+
+    <div class="slogan-section">
+        "Satisfy your cravings with every crispy bite!"
+    </div>
+
+    <div class="container">
+        <h2 id="menu" class="section-title">Our Menu & Prices</h2>
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chicken skin</td>
+                    <td class="price-text">₱160.00</td>
+                </tr>
+                <tr>
+                    <td>Chicken Isaw</td>
+                    <td class="price-text">₱160.00</td>
+                </tr>
+                <tr>
+                    <td>Bucheron</td>
+                    <td class="price-text">₱160.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">Why Choose Chick'n Crisp?</h2>
+        
+        <div class="services">
+            <div class="service-card">
+                <h3>Premium Quality</h3>
+                <p>Sourced from the finest farms and prepared with the highest standards to ensure every bite is perfection.</p>
+            </div>
+            <div class="service-card">
+                <h3> Fresh & Fast</h3>
+                <p>Quick preparation and delivery that guarantees your food arrives fresh and hot, ready to enjoy immediately.</p>
+            </div>
+            <div class="service-card">
+                <h3>Customer First</h3>
+                <p>Dedicated support and commitment to your satisfaction with every order. Your happiness is our priority.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Chick'n Crisp by Melo Jhen. All rights reserved.</p>
+        <p>Contact us: info@chicknerisp.com | Phone: 0915 971 8287</p>
+    </footer>
+</body>
+</html>
